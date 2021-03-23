@@ -1,0 +1,3 @@
+[submodule "walnut/vendor/spdlog"]
+	path = walnut/vendor/spdlog
+	url = https://github.com/gabime/spdlog
