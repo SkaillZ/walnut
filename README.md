@@ -5,7 +5,7 @@ Game engine project based on [Hazel](https://github.com/TheCherno/Hazel)
 ## Building
 
 Run premake with `./genproject.sh`, then `make`. This builds the engine and Sandbox libraries
-and the player binary. macOS and Linux are currently supported.
+and the player binary. macOS is currently supported.
 
 ## Running
 

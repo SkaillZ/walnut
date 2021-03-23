@@ -10,7 +10,7 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   mkdir -p bin/Debug-linux-x86_64/sandbox
 
-  PREMAKE_BIN="premake5-linux"
+  PREMAKE_BIN="premake5-linux --cc=clang"
 else
   echo "Unsupported platform."
   exit 1
