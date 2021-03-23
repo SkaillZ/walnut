@@ -2,4 +2,4 @@
 Makefile
 .vs/
 .vscode/
-bin*/
+/bin*/

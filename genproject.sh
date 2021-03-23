@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Select a premake binary according to the current platform
 if [ "$(uname)" == "Darwin" ]; then
