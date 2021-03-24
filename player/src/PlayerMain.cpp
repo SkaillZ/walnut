@@ -71,9 +71,8 @@ int main(int argc, char** argv) {
 
       // Load the new library and create a new app
       sharedLibPath = newestLibPath;
-      std::cout << sharedLibPath << std::endl;
       sharedLib = loadGameLibrary(sharedLibPath);
-      auto createApplicationFunc = (CreateApplicationPtr) dlsym(sharedLib, "CreateApplication");
+      createApplicationFunc = (CreateApplicationPtr) dlsym(sharedLib, "CreateApplication");
       app = createApplicationFunc();
     }
   }

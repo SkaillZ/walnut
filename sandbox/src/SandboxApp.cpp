@@ -8,6 +8,7 @@ public:
 };
 
 // entry point, called by the player
-extern "C" Walnut::Application* CreateApplication() {
+// cppcheck-suppress unusedFunction
+extern "C" Walnut::Application* CreateApplication() { 
   return new Sandbox();
 }
