@@ -18,9 +18,8 @@ std::filesystem::path findNewestLibrary(std::string basePath) {
 
   for (const auto& entry: std::filesystem::directory_iterator(basePath)) {
     auto writeTime = std::filesystem::last_write_time(entry.path());
-    auto writeTimeClock = decltype(writeTime)::clock::now();
-    auto writeTimeSec = std::chrono::time_point_cast<std::chrono::seconds>(writeTimeClock)
-      .time_since_epoch().count();
+    auto writeTimeSec = writeTime.time_since_epoch().count();
+
     if (writeTimeSec > maxWriteTime) {
       maxWriteTime = writeTimeSec;
       newestLibPath = entry.path();

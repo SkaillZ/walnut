@@ -92,6 +92,11 @@ project "player"
       "WN_PLATFORM_LINUX"
     }
 
+    links {
+      "walnut",
+      "dl"
+    }
+
   filter "configurations:Debug"
     defines "WN_DEBUG"
     symbols "On"
